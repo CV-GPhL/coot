@@ -100,9 +100,9 @@ std::pair<bool, std::vector<coot::residue_spec_t> > molecule_class_info_t::compa
                                                       float delta_x = at_1->x - at_2->x;
                                                       float delta_y = at_1->y - at_2->y;
                                                       float delta_z = at_1->z - at_2->z;
-                                                      if (std::fabsf(delta_x) > 0.01) {
-                                                         if (std::fabsf(delta_y) > 0.01) {
-                                                            if (std::fabsf(delta_z) > 0.01) {
+                                                      if ((float) std::fabs(delta_x) > 0.01) {
+                                                         if ((float) std::fabs(delta_y) > 0.01) {
+                                                            if ((float) std::fabs(delta_z) > 0.01) {
                                                                if (false)
                                                                   std::cout << "DEBUG:: atom " << coot::atom_spec_t(at_1) << " " << coot::atom_spec_t(at_2) << " "
                                                                             << delta_x << " " << delta_y << " " << delta_z << std::endl;
